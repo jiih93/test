@@ -9,13 +9,14 @@
 
 <script>
 document.write('시작');
+
 tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "category-sales").getDataSourcesAsync().then(datasources =>
 {dataSource = datasources.find(datasource => datasource.name === "Sample - Superstore");
   return dataSource.getUnderlyingDataAsync();
  }).then(dataTable => {
     let field = dataTable.columns.find(column => column.fieldName === "Sub-Category");
     let list = [];
-    document.write('list받기');
+    //document.write('list받기');
     for (let row of dataTable.data) {
         list.push(row[field.index].value);
     }
@@ -28,6 +29,6 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "c
 <body>
 hello
 extensions ok?
-<p><=values>
+
 </body>
 </html>
