@@ -16,19 +16,17 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "c
  }).then(dataTable => {
     let field = dataTable.columns.find(column => column.fieldName === "Sub-Category");
     let list = [];
-    //document.write('list받기');
+    document.write('list받기');
     for (let row of dataTable.data) {
         list.push(row[field.index].value);
     }
     let values = list.filter((el, i, arr) => arr.indexOf(el) === i);
-    //document.write(values)
+    document.write(values)
     //console.log(values)
 });
 
 	</script>
 <body>
-hello
-extensions ok?
-
+D3 Bar Chart in Tableau
 </body>
 </html>
