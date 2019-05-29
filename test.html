@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TEST tableau extensions</title>
+	<title></title>
 </head>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="http://tableau.github.io/extensions-api/lib/tableau.extensions.1.latest.js"></script>
-
-<script>
-
-tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "category-sales").getDataSourcesAsync().then(datasources =>
-{dataSource = datasources.find(datasource => datasource.name === "Sample - Superstore");
-  return dataSource.getUnderlyingDataAsync();
- }).then(dataTable => {
-    let field = dataTable.columns.find(column => column.fieldName === "Sub-Category");
-    let list = [];
-    for (let row of dataTable.data) {
-        list.push(row[field.index].value);
-    }
-    let values = list.filter((el, i, arr) => arr.indexOf(el) === i);
-    document.write(values)
-    //console.log(values)
-});
-
-	</script>
 <body>
-
+hello
 </body>
 </html>
