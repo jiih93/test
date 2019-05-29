@@ -9,7 +9,7 @@
 
 <script>
 
-tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "date-sales").getDataSourcesAsync().then(datasources =>
+tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "category-sales").getDataSourcesAsync().then(datasources =>
 {dataSource = datasources.find(datasource => datasource.name === "Sample - Superstore");
   return dataSource.getUnderlyingDataAsync();
  }).then(dataTable => {
@@ -19,7 +19,8 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "d
         list.push(row[field.index].value);
     }
     let values = list.filter((el, i, arr) => arr.indexOf(el) === i);
-    console.log(values)
+    document.write(values)
+    //console.log(values)
 });
 
 	</script>
