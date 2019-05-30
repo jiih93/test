@@ -15,12 +15,13 @@
 <script src="http://tableau.github.io/extensions-api/lib/tableau.extensions.1.latest.js"></script>
 <script src="https://jiih93.github.io/test/D3.js"></script>
 
-<!-- <script>
+<script>
 document.write('시작');
 
 tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "category-sales").getDataSourcesAsync().then(datasources =>
 {dataSource = datasources.find(datasource => datasource.name === "Sample - Superstore");
-  return dataSource.getUnderlyingDataAsync();
+	alert('성공');
+	return dataSource.getUnderlyingDataAsync();
  }).then(dataTable => {
     let field = dataTable.columns.find(column => column.fieldName === "Sub-Category");
     let list = [];
@@ -29,13 +30,14 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "c
         list.push(row[field.index].value);
     }
     let values = list.filter((el, i, arr) => arr.indexOf(el) === i);
-    document.write(values)
-    //console.log(values)
+    console.log(values);
+    document.write(values);
+
 });
-</script> -->
+</script> 
 
 <body>
-D3 Bar Chart in Tableau
+	test...
     
-    </body>
+</body>
 </html>
